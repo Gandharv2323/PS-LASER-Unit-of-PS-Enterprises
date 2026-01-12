@@ -13,13 +13,6 @@ const machines = [
         power: '3 KW',
         size: '3m × 1.5m',
         type: 'Primary System'
-    },
-    {
-        id: 2,
-        name: 'GENESIS Laser',
-        power: '1.5 KW',
-        size: '3m × 1.5m',
-        type: 'Precision System'
     }
 ]
 
