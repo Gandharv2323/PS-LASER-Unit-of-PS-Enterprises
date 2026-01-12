@@ -39,8 +39,7 @@ function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <img src="/ps-logo.png" alt="PS Logo" className="brand-logo" />
-                    <span className="brand-name">PS LASER</span>
-                    <span className="brand-unit">Unit of P S Enterprises</span>
+                    <span className="brand-name"><span className="ps-orange">PS</span> LASER</span>
                 </motion.div>
 
                 {/* Headline */}
