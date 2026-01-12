@@ -71,6 +71,25 @@
     color: #25D366;
 }
 
+/* WhatsApp GIF Animation */
+.contact-action.whatsapp {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.whatsapp-gif {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.whatsapp-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .action-text {
     font-size: 1.25rem;
     font-weight: 500;

@@ -89,8 +89,11 @@ Thanks and regards,
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <a href={whatsappLink} className="contact-action whatsapp" target="_blank" rel="noopener noreferrer">
-                        <span className="action-label">WhatsApp</span>
-                        <span className="action-text">Start a conversation</span>
+                        <img src="/whatsapp.gif" alt="WhatsApp" className="whatsapp-gif" />
+                        <div className="whatsapp-text">
+                            <span className="action-label">WhatsApp</span>
+                            <span className="action-text">Start a conversation</span>
+                        </div>
                     </a>
                     <a href={emailLink} className="contact-action email">
                         <span className="action-label">Email</span>
