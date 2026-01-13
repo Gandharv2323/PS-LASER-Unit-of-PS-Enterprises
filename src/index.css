@@ -250,20 +250,187 @@ body {
 }
 
 /* ===================================
-   Contact Section
+   Portfolio Section
+   =================================== */
+.portfolio-section {
+  align-items: flex-start;
+  padding-top: 100px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.portfolio-content {
+  width: 100%;
+  padding: 0 var(--section-padding);
+}
+
+.portfolio-header {
+  margin-bottom: 3rem;
+}
+
+.portfolio-filters {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.portfolio-item {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-category {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* ===================================
+   Process Section - Timeline
+   =================================== */
+.process-section {
+  align-items: center;
+  justify-content: center;
+}
+
+.process-content {
+  width: 100%;
+  padding: 0 var(--section-padding);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.process-step-item {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 1px solid var(--color-accent);
+}
+
+.step-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.step-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ===================================
+   Contact Section - Professional
    =================================== */
 .contact-section {
   align-items: center;
   justify-content: center;
   text-align: center;
   background: var(--color-bg);
+  height: auto;
+  min-height: 100vh;
+  padding: 100px 0;
 }
 
-.contact-section .section-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+.contact-header {
+  margin-bottom: 4rem;
 }
 
 .contact-cta-btn {
@@ -271,7 +438,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1.25rem 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   background: var(--color-accent);
   color: var(--color-text-primary);
   font-family: var(--font-primary);
@@ -283,6 +450,13 @@ body {
   border: none;
   cursor: pointer;
   transition: all var(--transition-medium);
+  gap: 0.75rem;
+}
+
+.cta-whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .contact-cta-btn:hover {
@@ -291,60 +465,79 @@ body {
   transform: translateY(-2px);
 }
 
-/* Contact Info Grid */
-.contact-info-grid {
+/* Contact Info Grid Professional */
+.contact-info-professional {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin-top: 4rem;
   text-align: left;
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
 }
 
-.contact-info-item h4 {
+.contact-column-title {
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-text-muted);
-  margin-bottom: 0.75rem;
-}
-
-.contact-info-item p,
-.contact-info-item a {
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  line-height: 1.8;
-}
-
-.contact-info-item a:hover {
+  letter-spacing: 0.2em;
   color: var(--color-accent);
+  margin-bottom: 1.5rem;
 }
 
-/* ===================================
-   Process Overlay (Powder Coating)
-   =================================== */
-.process-steps {
+.phone-list-professional {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.process-step {
+.phone-entry {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.phone-entry:hover {
+  opacity: 0.8;
+}
+
+.phone-entry.primary .phone-number-text {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+}
+
+.phone-number-text {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.phone-name-text {
   font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: var(--color-text-muted);
 }
 
-.process-step::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: var(--color-accent);
+.primary-badge {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  background: rgba(230, 74, 25, 0.2);
+  color: var(--color-accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.contact-email,
+.contact-address,
+.contact-gst {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-decoration: none;
+  font-style: normal;
 }
 
 /* ===================================
@@ -392,10 +585,12 @@ body {
   .cinematic-section {
     min-height: 100vh;
     scroll-snap-align: none;
+    height: auto;
+    padding-bottom: 4rem;
   }
 
   .section-content {
-    padding-bottom: 15vh;
+    padding-bottom: 5vh;
   }
 
   .section-specs {
@@ -408,13 +603,18 @@ body {
     gap: 3rem;
   }
 
-  .contact-info-grid {
+  .process-timeline {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .process-steps {
-    flex-wrap: wrap;
+  .contact-info-professional {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Disable Ken Burns on mobile */

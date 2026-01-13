@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import LoadingScreen from './components/LoadingScreen'
+import Header from './components/Header'
+import './components/Header.css'
 
 // Cinematic Sections
 import {
@@ -10,6 +12,8 @@ import {
     PowderCoatingSection,
     FabricationSection,
     CapabilitiesSection,
+    PortfolioSection,
+    ProcessSection,
     AboutSection,
     ContactSection
 } from './components/sections'
@@ -25,6 +29,8 @@ function App() {
         <>
             <LoadingScreen onLoadComplete={() => setIsLoaded(true)} />
 
+            <Header />
+
             <main className={`app ${isLoaded ? 'loaded' : ''}`}>
                 <HeroSection />
                 <WhatWeDoSection />
@@ -32,6 +38,8 @@ function App() {
                 <BendingSection />
                 <PowderCoatingSection />
                 <FabricationSection />
+                <ProcessSection />
+                <PortfolioSection />
                 <CapabilitiesSection />
                 <AboutSection />
                 <ContactSection />
