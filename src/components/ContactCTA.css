@@ -129,11 +129,27 @@
 .phone-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     font-size: 0.95rem;
     color: var(--color-text-primary);
     text-decoration: none;
     transition: color var(--transition-fast);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.phone-item:last-child {
+    border-bottom: none;
+}
+
+.phone-number {
+    font-weight: 500;
+}
+
+.phone-name {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
 }
 
 .phone-item:hover {

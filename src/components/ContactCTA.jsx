@@ -7,10 +7,10 @@ import './ContactCTA.css'
  */
 
 const phoneNumbers = [
-    { number: '+91 7719976990', label: 'Primary' },
-    { number: '+91 9763679499', label: null },
-    { number: '+91 9764364704', label: null },
-    { number: '+91 9623161813', label: null }
+    { number: '+91 7719976990', name: 'Swapnil Tanpure', label: 'Primary' },
+    { number: '+91 9763679499', name: 'Pranil Talap', label: null },
+    { number: '+91 9764364704', name: 'Umesh Tanpure', label: null },
+    { number: '+91 9623161813', name: 'Sonu Agrawal', label: null }
 ]
 
 function ContactCTA() {
@@ -119,7 +119,8 @@ Thanks and regards,
                                     href={`tel:${phone.number.replace(/\s/g, '')}`}
                                     className="phone-item"
                                 >
-                                    {phone.number}
+                                    <span className="phone-number">{phone.number}</span>
+                                    <span className="phone-name">{phone.name}</span>
                                     {phone.label && <span className="phone-badge">{phone.label}</span>}
                                 </a>
                             ))}
