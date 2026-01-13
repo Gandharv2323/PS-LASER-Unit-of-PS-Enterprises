@@ -18,16 +18,16 @@ function ContactSection() {
 
     return (
         <section className="cinematic-section contact-section" id="contact">
-            {/* Dark Background */}
-            <div className="section-bg" style={{ background: '#0a0a0a' }}></div>
+            {/* Dark Background - Ensure z-index 0 */}
+            <div className="section-bg" style={{ background: '#0a0a0a', zIndex: 0 }}></div>
 
-            {/* Content */}
+            {/* Content - Ensure z-index 10 via CSS */}
             <div className="contact-wrapper">
                 <motion.div
                     className="contact-header"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <span className="section-label">Contact</span>
@@ -46,7 +46,7 @@ function ContactSection() {
                     className="contact-info-professional"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     {/* Phone Column */}

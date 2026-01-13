@@ -15,8 +15,9 @@ function PowderCoatingSection() {
     return (
         <section className="cinematic-section" id="powder-coating">
             {/* Background */}
-            <div className="section-bg" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #181818 100%)' }}>
-                {/* Replace with video/image when available */}
+            {/* Background Image */}
+            <div className="section-bg">
+                <img src="/bg-powder-coating.png" alt="Automated Powder Coating Line" />
             </div>
             <div className="section-overlay" style={{ background: 'rgba(10,10,10,0.4)' }}></div>
 

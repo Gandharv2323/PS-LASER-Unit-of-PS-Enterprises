@@ -11,37 +11,49 @@ const portfolioItems = [
         id: 1,
         title: 'Industrial Enclosures',
         category: 'Laser Cutting',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-1.png'
     },
     {
         id: 2,
         title: 'Control Panel Housings',
         category: 'Sheet Metal',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-2.png'
     },
     {
         id: 3,
         title: 'Precision Brackets',
         category: 'CNC Bending',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-3.png'
     },
     {
         id: 4,
         title: 'Machine Guards',
         category: 'Fabrication',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-4.png'
     },
     {
         id: 5,
         title: 'Custom Fixtures',
         category: 'Welding',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-5.png'
     },
     {
         id: 6,
         title: 'Powder Coated Parts',
         category: 'Powder Coating',
-        image: '/hero_background_frame_1768236738290.png'
+        image: '/gallery-6.png'
+    },
+    {
+        id: 7,
+        title: 'Precision Laser Cut Patterns',
+        category: 'Laser Cutting',
+        image: '/portfolio-7.png'
+    },
+    {
+        id: 8,
+        title: 'Heavy Structural Fabrication',
+        category: 'Fabrication',
+        image: '/portfolio-8.png'
     }
 ]
 
@@ -62,7 +74,7 @@ function PortfolioSection() {
                     className="portfolio-header"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <span className="section-label">Portfolio</span>
@@ -76,7 +88,7 @@ function PortfolioSection() {
                     className="portfolio-filters"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ delay: 0.2 }}
                 >
                     {filters.map((filter) => (
@@ -102,7 +114,7 @@ function PortfolioSection() {
                             layout
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
                         >

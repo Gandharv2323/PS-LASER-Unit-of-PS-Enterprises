@@ -8,8 +8,9 @@ function BendingSection() {
     return (
         <section className="cinematic-section" id="bending">
             {/* Background */}
-            <div className="section-bg" style={{ background: 'linear-gradient(135deg, #0d0d0d 0%, #151515 100%)' }}>
-                {/* Replace with video/image when available */}
+            {/* Background Image */}
+            <div className="section-bg">
+                <img src="/bg-bending.png" alt="CNC Bending Machine" />
             </div>
             <div className="section-overlay" style={{ background: 'rgba(10,10,10,0.4)' }}></div>
 

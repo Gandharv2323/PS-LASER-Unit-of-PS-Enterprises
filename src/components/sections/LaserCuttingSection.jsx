@@ -8,8 +8,9 @@ function LaserCuttingSection() {
     return (
         <section className="cinematic-section" id="laser-cutting">
             {/* Background - Video placeholder, using dark gradient */}
-            <div className="section-bg" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)' }}>
-                {/* Replace with video when available */}
+            {/* Background Image */}
+            <div className="section-bg">
+                <img src="/bg-laser-cutting.png" alt="High-tech CNC Laser Cutting" />
             </div>
             <div className="section-overlay" style={{ background: 'rgba(10,10,10,0.5)' }}></div>
 

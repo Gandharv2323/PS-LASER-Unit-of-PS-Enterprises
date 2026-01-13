@@ -8,8 +8,9 @@ function FabricationSection() {
     return (
         <section className="cinematic-section" id="fabrication">
             {/* Background */}
-            <div className="section-bg" style={{ background: 'linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%)' }}>
-                {/* Replace with welding video/image when available */}
+            {/* Background Image */}
+            <div className="section-bg">
+                <img src="/bg-fabrication.png" alt="Industrial Fabrication and Welding" />
             </div>
             <div className="section-overlay" style={{ background: 'rgba(10,10,10,0.4)' }}></div>
 

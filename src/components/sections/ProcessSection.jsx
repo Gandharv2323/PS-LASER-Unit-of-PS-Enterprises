@@ -48,7 +48,7 @@ function ProcessSection() {
                     className="process-header"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <span className="section-label">Process</span>
@@ -65,7 +65,7 @@ function ProcessSection() {
                             className="process-step-item"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.5, delay: index * 0.15 }}
                         >
                             <div className="step-number">{step.number}</div>
