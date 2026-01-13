@@ -12,7 +12,16 @@ const machines = [
         name: 'HSG Laser',
         power: '3 KW',
         size: '3m × 1.5m',
-        type: 'Primary System'
+        type: 'High Power',
+        highlight: true
+    },
+    {
+        id: 2,
+        name: 'HSG Laser',
+        power: '1.5 KW',
+        size: '3m × 1.5m',
+        type: 'Precision',
+        highlight: false
     }
 ]
 
@@ -45,7 +54,7 @@ function MachineCards() {
                     {machines.map((machine, index) => (
                         <motion.div
                             key={machine.id}
-                            className="machine-card"
+                            className={`machine-card ${machine.highlight ? 'machine-highlight' : ''}`}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

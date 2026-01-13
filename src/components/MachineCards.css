@@ -7,8 +7,8 @@
 }
 
 .machines-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-bottom: 4rem;
 }
@@ -18,13 +18,32 @@
     padding: 2.5rem;
     background: var(--color-primary);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: border-color var(--transition-medium);
-    max-width: 500px;
-    width: 100%;
+    transition: all var(--transition-medium);
+    position: relative;
 }
 
 .machine-card:hover {
     border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Highlighted Machine (3 KW) */
+.machine-card.machine-highlight {
+    border: 2px solid var(--color-accent);
+    background: linear-gradient(135deg, var(--color-primary) 0%, rgba(230, 74, 25, 0.08) 100%);
+    box-shadow: 0 0 30px rgba(230, 74, 25, 0.2);
+}
+
+.machine-card.machine-highlight::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -1px;
+    right: 2rem;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 0.8rem;
 }
 
 .machine-type {
