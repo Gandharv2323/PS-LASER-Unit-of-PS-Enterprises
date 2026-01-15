@@ -8,8 +8,13 @@ function CinematicOpening({ onComplete }) {
     const [isVisible, setIsVisible] = useState(true)
     const particlesRef = useRef([])
 
+    const hasTriggeredRef = useRef(false)
+
     // Trigger opening sequence
     useEffect(() => {
+        if (hasTriggeredRef.current) return
+        hasTriggeredRef.current = true
+
         const timer = setTimeout(() => {
             setIsOpening(true)
             // Cleanup after animation

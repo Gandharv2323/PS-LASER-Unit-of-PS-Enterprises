@@ -45,7 +45,7 @@ function App() {
         <>
             <LoadingScreen onLoadComplete={handleLoadComplete} />
 
-            {isLoaded && showOpening && (
+            {isLoaded && showOpening && !appReady && (
                 <CinematicOpening onComplete={handleOpeningComplete} />
             )}
 
