@@ -18,20 +18,40 @@ import {
     ContactSection
 } from './components/sections'
 
+import CinematicOpening from './components/CinematicOpening'
+
 /**
  * PS Laser - Cinematic Industrial Website
  * SpaceX-inspired vertical storytelling
  */
 function App() {
     const [isLoaded, setIsLoaded] = useState(false)
+    const [showOpening, setShowOpening] = useState(false)
+    const [appReady, setAppReady] = useState(false)
+
+    // Handle initial load completion
+    const handleLoadComplete = () => {
+        setIsLoaded(true)
+        setShowOpening(true)
+    }
+
+    // Handle cinematic opening completion
+    const handleOpeningComplete = () => {
+        setShowOpening(false)
+        setAppReady(true)
+    }
 
     return (
         <>
-            <LoadingScreen onLoadComplete={() => setIsLoaded(true)} />
+            <LoadingScreen onLoadComplete={handleLoadComplete} />
+
+            {isLoaded && showOpening && (
+                <CinematicOpening onComplete={handleOpeningComplete} />
+            )}
 
             <Header />
 
-            <main className={`app ${isLoaded ? 'loaded' : ''}`}>
+            <main className={`app ${appReady ? 'loaded' : ''}`}>
                 <HeroSection />
                 <WhatWeDoSection />
                 <LaserCuttingSection />
