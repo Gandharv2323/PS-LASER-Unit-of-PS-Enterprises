@@ -46,11 +46,36 @@
 .door-left {
     left: 0;
     border-right: 2px solid rgba(255, 107, 0, 0.3);
+    justify-content: flex-end;
 }
 
 .door-right {
     right: 0;
     border-left: 2px solid rgba(255, 107, 0, 0.3);
+    justify-content: flex-start;
+}
+
+.door-branding {
+    position: absolute;
+    font-size: 25vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    font-family: 'Neue Power', 'Inter', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    text-shadow:
+        1px 1px 1px rgba(255, 255, 255, 0.05),
+        -1px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.door-left .door-branding {
+    right: 10%;
+}
+
+.door-right .door-branding {
+    left: 10%;
 }
 
 /* Industrial Details */
